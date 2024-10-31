@@ -70,6 +70,7 @@ class _RegisterationScreenState extends State<RegisterationScreen> {
                     height: 10,
                   ),
                   CustomFormTextField(
+                    obscureText: true,
                       onChange: (data) {
                         password = data;
                       },
