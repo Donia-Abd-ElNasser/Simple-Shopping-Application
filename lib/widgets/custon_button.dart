@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SigningButton extends StatelessWidget {
-    SigningButton({this.onTap , required this.ButtonText});
+    SigningButton({super.key, this.onTap , required this.ButtonText});
  final String ButtonText;
 VoidCallback? onTap;
   @override

@@ -1,4 +1,3 @@
-
 import 'package:e_commerce_app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import '../models/onBoarding_model.dart';
@@ -100,7 +99,8 @@ class _OnbordingState extends State<Onbording> {
                 }
               },
               style: TextButton.styleFrom(
-                foregroundColor: Colors.white, backgroundColor: Theme.of(context).primaryColor,
+                foregroundColor: Colors.white,
+                backgroundColor: Theme.of(context).primaryColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),

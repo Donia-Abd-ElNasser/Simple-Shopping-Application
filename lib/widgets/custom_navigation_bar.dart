@@ -35,25 +35,21 @@ class CategoryBar extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, HomePage.id);
             },
-           
           ),
           CustomIcon(
             icon: FontAwesomeIcons.heart,
             onPressed: () {
               Navigator.pushNamed(context, FavouritePage.id);
             },
-            
           ),
           CustomIcon(
             icon: Icons.person,
             onPressed: () {
               Navigator.pushNamed(context, ProfilePage.id);
             },
-            
           ),
         ],
       ),
     );
   }
 }
-

@@ -20,26 +20,34 @@ class _FavouritePageState extends State<FavouritePage> {
         backgroundColor: Colors.white,
         title: Text(
           'Favourite Collection',
-          style: TextStyle(color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              color: Theme.of(context).primaryColor,
+              fontWeight: FontWeight.bold),
         ),
       ),
       body: favorites.isEmpty
           ? const Center(child: Text('No favorites added'))
           : ListView.builder(
-        itemCount: favorites.length,
-        itemBuilder: (context, index) {
-          final product = favorites[index];
-          return ListTile(
-            leading: Image.network(product.image,width: 100,), // Adjust according to your ProductModel properties
-            title: Text(product.title),
-            subtitle: Text('\$${product.price.toString()}'),
-            trailing: IconButton(onPressed: (){
-            setState(() {
-              FavoritesModel.removeFavorite(product);
-            });}, icon: const Icon(Icons.delete)),
-          );
-        },
-      ),
+              itemCount: favorites.length,
+              itemBuilder: (context, index) {
+                final product = favorites[index];
+                return ListTile(
+                  leading: Image.network(
+                    product.image,
+                    width: 100,
+                  ), // Adjust according to your ProductModel properties
+                  title: Text(product.title),
+                  subtitle: Text('\$${product.price.toString()}'),
+                  trailing: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          FavoritesModel.removeFavorite(product);
+                        });
+                      },
+                      icon: const Icon(Icons.delete)),
+                );
+              },
+            ),
     );
   }
 }

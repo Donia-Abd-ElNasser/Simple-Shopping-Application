@@ -7,26 +7,22 @@ class ProductModel {
 
   final String category;
 
-  ProductModel(
-      {required this.category,
-      required this.id,
-      required this.title,
-      required this.description,
-      required this.price,
-      required this.image,
-
-     }
-     );
+  ProductModel({
+    required this.category,
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.price,
+    required this.image,
+  });
   factory ProductModel.fromJson(jsonData) {
-    
     return ProductModel(
-        id: jsonData['id'],
-        title: jsonData['title'],
-        description: jsonData['description'],
-        price: jsonData['price'],
-        image: jsonData['image'],
-        category: jsonData['category'],     );
+      id: jsonData['id'],
+      title: jsonData['title'],
+      description: jsonData['description'],
+      price: jsonData['price'],
+      image: jsonData['image'],
+      category: jsonData['category'],
+    );
   }
-  
 }
-

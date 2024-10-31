@@ -34,7 +34,6 @@ class _LoginScreenState extends State<LoginScreen> {
               key: formKey,
               child: ListView(
                 children: [
-                
                   const SizedBox(
                     height: 100,
                   ),
@@ -85,7 +84,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
                           try {
                             await UserLogin();
-                               Navigator.pushNamed(context,HomePage.id,arguments: email);
+                            Navigator.pushNamed(context, HomePage.id,
+                                arguments: email);
                             ShowSnackBar(context, 'Success');
                             print('offffffffffffffffffff');
                           } on FirebaseAuthException catch (e) {

@@ -6,6 +6,3 @@ void ShowSnackBar(BuildContext context, String text) {
     );
   }
 const  appColor= Color(0xff4A1D18);
-// const kmessagesCollections ='messages';
-// const kmessages ='message';
-// const createdAt ='createdAt';

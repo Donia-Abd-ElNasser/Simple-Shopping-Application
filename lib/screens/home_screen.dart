@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../models/product_model.dart';
@@ -19,16 +18,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  void initState(){
+  void initState() {
     const GetCollection();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(80),
         child: Padding(
-          padding: const EdgeInsets.only(top: 25,left: 20,right: 20),
+          padding: const EdgeInsets.only(top: 25, left: 20, right: 20),
           child: CustomAppBar(
             icon: FontAwesomeIcons.bars,
             text: 'New Collection',
@@ -96,4 +96,3 @@ class GetCollection extends StatelessWidget {
     );
   }
 }
-

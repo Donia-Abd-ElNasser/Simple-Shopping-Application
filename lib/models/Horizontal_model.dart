@@ -3,5 +3,4 @@ class Horizontalmodel {
   final String text;
 
   Horizontalmodel({required this.photo, required this.text});
-  
 }

@@ -6,25 +6,33 @@ import '../services/categories_services.dart';
 
 class WomenCategoryPage extends StatelessWidget {
   const WomenCategoryPage({super.key});
-  static String id ='Women\'s Category';
+  static String id = 'Women\'s Category';
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( appBar: AppBar(
-        iconTheme: IconThemeData( color: Theme.of(context).primaryColor,),
-        backgroundColor:Colors.white ,
-        title: Text('Women\'s Collection',style: TextStyle(color:Theme.of(context).primaryColor ,fontWeight: FontWeight.bold),),
+    return Scaffold(
+      appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Theme.of(context).primaryColor,
+        ),
+        backgroundColor: Colors.white,
+        title: Text(
+          'Women\'s Collection',
+          style: TextStyle(
+              color: Theme.of(context).primaryColor,
+              fontWeight: FontWeight.bold),
+        ),
       ),
-      body:
-      Padding(
+      body: Padding(
         padding: const EdgeInsets.only(left: 16, right: 16, top: 65),
         child: FutureBuilder<List<ProductModel>>(
-          future: CategoriesServices().GetCategoriesProducts(categoryName:"women's clothing"),
+          future: CategoriesServices()
+              .GetCategoriesProducts(categoryName: "women's clothing"),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Center(
-
-                child: CircularProgressIndicator(color: Theme.of(context).primaryColor),
+                child: CircularProgressIndicator(
+                    color: Theme.of(context).primaryColor),
               );
             } else if (snapshot.hasError) {
               return Center(
@@ -46,7 +54,9 @@ class WomenCategoryPage extends StatelessWidget {
                   mainAxisSpacing: 50,
                 ),
                 itemBuilder: (context, index) {
-                  return CustomCardWidget(product: products[index], );
+                  return CustomCardWidget(
+                    product: products[index],
+                  );
                 },
               );
             }

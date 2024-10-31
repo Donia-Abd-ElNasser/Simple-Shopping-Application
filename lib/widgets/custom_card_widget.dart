@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../models/favourite_model.dart';
 import '../models/product_model.dart';
 
-
 class CustomCardWidget extends StatefulWidget {
   const CustomCardWidget({required this.product});
   final ProductModel product;
@@ -21,7 +20,7 @@ class _CustomCardWidgetState extends State<CustomCardWidget> {
     isFavourite = FavoritesModel.isFavorite(widget.product);
     color = isFavourite ? Colors.red : Colors.white;
 
-    // Listen to favoritesNotifier to update icon color when favorites change
+   
     FavoritesModel.favoritesNotifier.addListener(_updateFavoriteStatus);
   }
 
@@ -64,9 +63,7 @@ class _CustomCardWidgetState extends State<CustomCardWidget> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           child: GestureDetector(
-            onTap: () {
-            
-            },
+            onTap: () {},
             child: Stack(
               clipBehavior: Clip.none,
               children: [
